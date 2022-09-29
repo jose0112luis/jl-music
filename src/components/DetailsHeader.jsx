@@ -13,7 +13,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
         <img 
           alt='art'
           src={ artistId 
-            ? artist.artwork?.url.replace('{w}', '500').replace('h', '500') 
+            ? artist.artwork?.url.replace('{w}', '500').replace('{h}', '500') 
             : songData?.images?.coverart }
           className='sm:w-48 w-28 sm:h-48 h-28 rounded-full object-cover border-2 shadow-xl shadow-black'
         />
@@ -40,7 +40,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
         </div>
       </div>
 
-      {/* <div className="w-full sm:h-44 h-24" /> */}
+      <div className="w-full sm:h-44 h-24" />
 
     </div>
   );
