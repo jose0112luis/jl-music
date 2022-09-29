@@ -4,12 +4,12 @@ import { useGetTopChartsQuery } from '../redux/services/shazamCore'
 
 const Discover = () => {
 
-  const { data, isFetching, isError } = useGetTopChartsQuery();  // invocando al endpoint de Top Charts
+  const { data, isFetching, error } = useGetTopChartsQuery();  // invocando al endpoint de Top Charts
   const genreTitle = 'Pop';
+console.log(data);
+  // if ( isFetching ) return <Loader title='Loading songs...' />;  // si esta cargando la data muestra ese componente
 
-  if ( isFetching ) return <Loader title='Loading songs...' />;  // si esta cargando la data muestra ese componente
-
-  if ( isError ) return <Error />;  // si ocurrió un error muestra el componente de error
+  // if ( isError ) return <Error />;  // si ocurrió un error muestra el componente de error
 
   return (
     <div className='flex flex-col'>
